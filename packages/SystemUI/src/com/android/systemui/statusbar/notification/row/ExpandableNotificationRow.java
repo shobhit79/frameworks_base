@@ -2829,6 +2829,10 @@ public class ExpandableNotificationRow extends ActivatableNotificationView
         return shouldShowPublic() ? mPublicLayout : mPrivateLayout;
     }
 
+    public View getContentView() {
+        return getPrivateLayout().getContractedChild();
+    }
+
     public View getExpandedContentView() {
         return getPrivateLayout().getExpandedChild();
     }

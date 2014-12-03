@@ -1395,6 +1395,18 @@ public class StatusBar extends SystemUI implements DemoMode,
         }
     }
 
+    protected boolean hasActiveVisibleNotifications() {
+        return mEntryManager.getNotificationData().hasActiveVisibleNotifications();
+    }
+
+    protected boolean hasActiveOngoingNotifications() {
+        return mEntryManager.getNotificationData().hasActiveOngoingNotifications();
+    }
+
+    protected boolean hasActiveClearableNotificationsQS() {
+        return hasActiveClearableNotifications();
+    }
+
     public void updateAreThereNotifications() {
         if (SPEW) {
             final boolean clearable = hasActiveNotifications() &&
