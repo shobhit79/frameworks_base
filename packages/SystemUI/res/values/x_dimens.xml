@@ -39,4 +39,7 @@
     <!-- QS tile title -->
     <dimen name="qs_tile_height_wo_label">48dp</dimen>
 
+    <!-- Bottom margin size when fingerprint in display is active -->
+    <dimen name="keyguard_indication_margin_bottom_fingerprint_in_display">@dimen/keyguard_indication_margin_bottom</dimen>
+
 </resources>
