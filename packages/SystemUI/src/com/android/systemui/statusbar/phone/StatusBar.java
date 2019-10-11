@@ -3899,6 +3899,8 @@ public class StatusBar extends SystemUI implements DemoMode,
         if (mQSPanel != null) {
             mQSPanel.updateResources();
             mQSPanel.updateSettings();
+        }
+        if (mQuickQSPanel != null) {
             mQuickQSPanel.updateSettings();
         }
     }
