@@ -751,6 +751,14 @@ public final class DefaultPermissionGrantPolicy {
             grantPermissionsToSystemPackage(systemCaptionsServicePackageName, userId,
                     MICROPHONE_PERMISSIONS);
         }
+
+        // ThemePicker
+        String themePickerPackage = "com.android.wallpaper";
+        PackageInfo pckg = getPackageInfo(themePickerPackage);
+        if (pckg != null) {
+            grantPermissionsToPackage(themePickerPackage, userId, false /* ignoreSystemPackage */,
+                    true /*whitelistRestrictedPermissions*/, STORAGE_PERMISSIONS);
+        }
     }
 
     private String getDefaultSystemHandlerActivityPackageForCategory(String category, int userId) {
