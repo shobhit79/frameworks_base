@@ -311,7 +311,8 @@ class LegacyGlobalActions implements DialogInterface.OnDismissListener, DialogIn
             addedKeys.add(actionKey);
         }
 
-        if (mEmergencyAffordanceManager.needsEmergencyAffordance()) {
+        if (Settings.System.getInt(mContext.getContentResolver(),
+                     Settings.System.POWERMENU_EMERGENCY, 0) == 1) {
             mItems.add(getEmergencyAction());
         }
 

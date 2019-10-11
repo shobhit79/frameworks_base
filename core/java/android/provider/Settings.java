@@ -4793,6 +4793,16 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * Whether to display the emergency option in the power menu
+         *
+         * @hide
+         */
+        public static final String POWERMENU_EMERGENCY = "powermenu_emergency";
+        /** @hide */
+        private static final Validator POWERMENU_EMERGENCY_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * Whether to display set of animations when prompting the power menu
          *
          * @hide
@@ -4883,6 +4893,7 @@ public final class Settings {
             POWERMENU_USERS,
             POWERMENU_LOGOUT,
             POWERMENU_TORCH,
+            POWERMENU_EMERGENCY,
         };
 
         /**
@@ -5029,6 +5040,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(POWERMENU_USERS);
             PRIVATE_SETTINGS.add(POWERMENU_LOGOUT);
             PRIVATE_SETTINGS.add(POWERMENU_TORCH);
+            PRIVATE_SETTINGS.add(POWERMENU_EMERGENCY);
         }
 
 
@@ -5146,6 +5158,7 @@ public final class Settings {
             VALIDATORS.put(POWERMENU_USERS, POWERMENU_USERS_VALIDATOR);
             VALIDATORS.put(POWERMENU_LOGOUT, POWERMENU_LOGOUT_VALIDATOR);
             VALIDATORS.put(POWERMENU_TORCH, POWERMENU_TORCH_VALIDATOR);
+            VALIDATORS.put(POWERMENU_EMERGENCY, POWERMENU_EMERGENCY_VALIDATOR);
         }
 
         /**
