@@ -5905,7 +5905,10 @@ public class NotificationManagerService extends SystemService {
         if (mInCall || mScreenOn) {
             return false;
         }
-
+        // Omni Lights
+        if (!record.isIntercepted() || record.isIntercepted() && record.shouldLightOnZen()) {
+            return false;
+        }
         return true;
     }
 
